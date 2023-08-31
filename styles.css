@@ -1,0 +1,149 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a blueish background */
+body {
+    background-color: #f0f5f9; /* Light blue background */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark gray text color */
+}
+
+/* Center the content */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styling for individual movie cards */
+.movie {
+    display: block; /* Make the link a block-level element */
+    background-color: #d8eaf3; /* Lighter blue card background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none; /* Remove link underline */
+    color: inherit; /* Inherit text color */
+  }
+  
+  .movie div {
+    /* Add padding and margin styles for the nested div */
+    padding: 0;
+    margin: 0;
+  }
+  
+
+.movie a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+.movie h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2580b3; /* Blue heading color */
+}
+
+.movie p {
+    font-size: 14px;
+    color: #555; /* Dark gray text color */
+}
+
+/* Styling for ranking sections */
+.ranking {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.ranking h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2580b3; /* Blue heading color */
+}
+
+.sorting-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    margin: 20px; /* Add margin to create space */
+  }
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #757575; /* Light gray color */
+    margin: px 0; /* Add spacing above and below the line */
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.movies-list {
+    flex: 2;
+    padding: 20px;
+    background-color: #d8eaf3; /* Lighter blue background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Create a border below the genre select */
+.genre-select {
+
+}
+
+/* Add this CSS to your existing styles */
+.budget-inputs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .budget-inputs input {
+    width: 100px; /* Adjust width as needed */
+    margin: 0 5px; /* Add spacing between input fields */
+  }
+  
+  .budget-inputs-separator {
+    margin: 0 10px; /* Add spacing around the separator */
+  }
+  
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    /* Adjust styles for mobile screens here */
+    .app {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .movie {
+        width: 250px;
+    }
+
+    .ranking {
+        flex-direction: column; /* Stack panels vertically on mobile */
+        align-items: center; /* Center align items on mobile */
+    }
+
+    .sorting-panel,
+    .movies-list {
+        flex: 1; /* Make panels take up full width on mobile */
+        margin: 10px 0; /* Add margin between panels on mobile */
+    }
+}
